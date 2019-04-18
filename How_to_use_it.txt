@@ -2,13 +2,13 @@ Copy files
 	initHuygens.sh
 	initGui.sh
 	hupro.sh
-into you .home folder on doom30.metacentrum.cz server
+into your .home folder on doom30.metacentrum.cz server
 
 1) start cmd and ssh session (ssh username@doom30.metacentrum.cz) or use putty.
 2) run ./initHuygens.sh
 3) start your VNC client with provided informations
 4) start xterm on your remote desktop and run ./hupro.sh
-5) logout properly after you finish. gui will be shut down when your reservation expire
+5) logout properly after you finish. gui will be shut down when your reservation time expire
 
 LINUX users:
 start ./dekonvoluce.sh in your terminal everything will be done for you automatically till start ssvnc. You can use SHIFT+INSERT to paste a vnc login from the clipboard.
