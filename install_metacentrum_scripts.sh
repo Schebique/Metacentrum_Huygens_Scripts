@@ -3,9 +3,9 @@ cd $HOME
 #test initHuygens
 echo -e "would you like to reinstall all scripts? (y/n) \c"
 	read
-	if ! [ -f ./initDeconvolution.sh ] || [ "$REPLY" = "y" ]; then
-		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/initDeconvolution.sh?raw=true  -O initDeconvolution.sh -q
-		chmod 700 initDeconvolution.sh
+	if ! [ -f ./deconvoluce.sh ] || [ "$REPLY" = "y" ]; then
+		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/deconvoluce.sh?raw=true  -O deconvoluce.sh -q
+		echo "dekonvoluce.sh copyied"
 	fi
 	if ! [ -f ./initHuygens.sh ] || [ "$REPLY" = "y" ]; then
 		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/initHuygens.sh?raw=true  -O initHuygens.sh -q
