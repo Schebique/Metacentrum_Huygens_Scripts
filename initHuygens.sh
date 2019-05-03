@@ -27,7 +27,7 @@ reservations=$(echo $reservationsUser $reservationsSalvet)
 #echo $reservations
 nTime=$(date +%s)
 echo "------------------------------------------------"
-echo Found reservations for $username:
+echo Reservations for $username:
 if [ $reservNum -gt 0 ] ; then
 	oldDTime=9999999999
 	#prohledat rezervace a najit nejblizsi
@@ -129,6 +129,6 @@ if [ $reservNum -gt 0 ] ; then
 #fi #konec podminky kdyz rezervace existuji
 else 
 	deleteVNClogin
-	echo "No Huygens reservations found at all"
+	echo "No Huygens reservations found for user $username""
 	exit 1
 fi
