@@ -24,6 +24,7 @@ echo -e "would you like to reinstall all scripts? (y/n) \c"
 	fi
 	if ! [ -f ./How_to_use_it.txt ] || [ "$REPLY" = "y" ]; then
 		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/How_to_use_it.txt?raw=true --unlink -O How_to_use_it.txt -q
+		echo
 		cat How_to_use_it.txt
 	fi
 	if [ "$REPLY" = "n" ]; then echo "No files were installed."
