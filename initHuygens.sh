@@ -129,6 +129,6 @@ if [ $reservNum -gt 0 ] ; then
 #fi #konec podminky kdyz rezervace existuji
 else 
 	deleteVNClogin
-	echo "No Huygens reservations found for user $username""
+	echo "No Huygens reservations found for user $username"
 	exit 1
 fi
