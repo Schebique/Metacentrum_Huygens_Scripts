@@ -78,7 +78,7 @@ if [ $reservNum -gt 0 ] ; then
 			path=$(pwd)/VNClogin.txt
 			if [ -z "${jobStat}" ] ; then
 				#qsub -q $resNum -I -- 
-				deleteVNClogin
+				#deleteVNClogin
 				initGui
 				#echo Job started and VNC correctly initialized
 			else
@@ -126,13 +126,13 @@ if [ $reservNum -gt 0 ] ; then
 			exit 1
 		fi
 	else 
-		deleteVNClogin
+		# deleteVNClogin
 		echo "No confirmed or running Huygens reservations found for user $username"
 		exit 1
 	fi
 #fi #konec podminky kdyz rezervace existuji
 else 
-	deleteVNClogin
+	# deleteVNClogin
 	echo "No Huygens reservations found for user $username"
 	exit 1
 fi
