@@ -4,7 +4,7 @@ cd $HOME
 echo -e "would you like to reinstall all scripts? (y/n) \c"
 	read
 	if ! [ -f ./deconvoluce.sh ] || [ "$REPLY" = "y" ]; then
-		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/deconvoluce.sh?raw=true  -O deconvoluce.sh -q
+		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/dekonvoluce.sh?raw=true  -O dekonvoluce.sh -q
 		echo "dekonvoluce.sh copyied"
 	fi
 	if ! [ -f ./initHuygens.sh ] || [ "$REPLY" = "y" ]; then
