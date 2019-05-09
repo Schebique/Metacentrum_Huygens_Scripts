@@ -6,7 +6,9 @@ deleteVNClogin() {
 
 initGui() {
 	rm VNClogin.txt
-	qsub -q $resNum ./initGui.sh
+	rSelect=d$(pbs_rstat -f $reservace | grep -F "Resource_List.select")
+	rSelect=$(echo $rSelect | cut -d " " -f 3)
+	qsub -q $resNum -l select=$rSelect ./initGui.sh
 	while ! [ -f ./VNClogin.txt ] ; do #cekej na start rezervace
 		sleep 3
 	done
