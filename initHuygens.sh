@@ -5,7 +5,7 @@ deleteVNClogin() {
 }
 
 initGui() {
-	rm VNClogin.txt
+	deleteVNClogin
 	rSelect=d$(pbs_rstat -f $reservace | grep -F "Resource_List.select")
 	rSelect=$(echo $rSelect | cut -d " " -f 3)
 	qsub -q $resNum -l select=$rSelect ./initGui.sh
@@ -14,6 +14,8 @@ initGui() {
 	done
 	sleep 1
 	cat VNClogin.txt
+	echo "This message can be displayed using this command:"
+	echo "cat VNClogin.txt"
 }
 
 #username=$(eval users | cut -d" " -f 1)
