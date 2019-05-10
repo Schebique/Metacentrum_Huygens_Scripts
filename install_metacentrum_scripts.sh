@@ -3,7 +3,7 @@ cd $HOME
 #test initHuygens
 echo -e "would you like to reinstall all scripts? (y/n) \c"
 	read
-	if ! [ -f ./deconvoluce.sh ] || [ "$REPLY" = "y" ]; then
+	if ! [ -f ./install_metacentrum_scripts.sh ] || [ "$REPLY" = "y" ]; then
 		wget https://github.com/Schebique/Metacentrum_Huygens_Scripts/blob/master/install_metacentrum_scripts.sh?raw=true  -O install_metacentrum_scripts.sh -q
 		echo "install_metacentrum_scripts.sh updated"
 	fi
