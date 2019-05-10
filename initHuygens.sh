@@ -85,12 +85,7 @@ if [ $reservNum -gt 0 ] ; then
 				else
 					echo "but VNC login credentials are not available. Trying to find gui..."
 					module add gui
-					flag=$(gui -p info | grep -F "running VNC" -c) #throws >0 if VNC is running
-					if [ $flag -eq 0 ]; then 
-						echo "no gui found. Starting new one..."
-						./initGui.sh
-					else gui -p info
-					fi
+					gui -p info
 				fi 
 			fi 
 		elif [ $dTime -gt 0 ] && [ $dTime -lt 600 ] ; then #pokud zacne job do 10ti minut
@@ -120,12 +115,7 @@ if [ $reservNum -gt 0 ] ; then
 					else
 						echo "but VNC login credentials are not available. Trying to find gui..."
 						module add gui
-						flag=$(gui -p info | grep -F "running VNC" -c) #throws >0 if VNC is running
-						if [ $flag -eq 0 ]; then 
-							echo "no gui found. Starting new one..."
-							./initGui.sh
-						else gui -p info
-						fi
+						gui -p info
 					fi 
 				fi
 			else
