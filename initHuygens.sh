@@ -85,7 +85,7 @@ if [ $reservNum -gt 0 ] ; then
 				else
 					echo "but VNC login credentials are not available. Trying to find gui..."
 					module add gui
-					flag=$(gui -p info | grep -F "There're no VNC session(s) to show! Exiting..." -c)
+					flag=$(gui -p info | grep -F "running VNC" -c) #throws >0 if VNC is running
 					if [ $flag -eq 0 ]; then initGui
 					else gui -p info
 					fi
@@ -118,7 +118,7 @@ if [ $reservNum -gt 0 ] ; then
 					else
 						echo "but VNC login credentials are not available. Trying to find gui..."
 						module add gui
-						flag=$(gui -p info | grep -F "There're no VNC session(s) to show! Exiting..." -c)
+						flag=$(gui -p info | grep -F "running VNC" -c) #throws >0 if VNC is running
 						if [ $flag -eq 0 ]; then initGui
 						else gui -p info
 						fi
