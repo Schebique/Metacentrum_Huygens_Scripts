@@ -107,8 +107,12 @@ if [ $reservNum -gt 0 ] ; then
 					if [[ -f ./VNClogin.txt ]]; then 
 						cat $path
 					else
-						echo "but VNC login credentials are not available. Trying to start gui..."
-						initGui
+						echo "but VNC login credentials are not available. Trying to find gui..."
+						module add gui
+						flag=$(gui -p info | grep -F "There're no VNC session(s) to show! Exiting..." -c)
+						if [ $flag -eq 0] then	initGui
+						else gui -p info
+						fi
 					fi 
 				fi
 			else
