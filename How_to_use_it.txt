@@ -5,7 +5,7 @@ How to use scripts
 2) run ./initHuygens.sh
 3) start your VNC client with provided informations
 4) start xterm on your remote desktop and run ./hupro.sh
-5) logout properly after you finish. gui will be shut down when your reservation time expire
+5) logout properly after you finish. Gui will be shut down when your reservation time expire.
 
 LINUX users:
 download and start ./dekonvoluce.sh in your local terminal. Everything will be done for you automatically till start ssvnc. You can use SHIFT+INSERT to paste a vnc login from the clipboard.
