@@ -14,8 +14,6 @@ initGui() {
 	done
 	sleep 1
 	cat VNClogin.txt
-	echo "This message can be displayed using this command:"
-	echo "cat VNClogin.txt"
 }
 
 #username=$(eval users | cut -d" " -f 1)
@@ -55,7 +53,7 @@ if [ $reservNum -gt 0 ] ; then
 			sTime=$(date -d "$rTime" +%s)
 			eTime=$(($sTime+durTime))
 			dTime=$(($sTime-$nTime))
-			echo $reservace starts at $rTime for $durTime seconds. Start after $dTime seconds.
+			echo "$reservace starts at $rTime for $durTime seconds. Start after $dTime seconds."
 			if [ $dTime -lt $oldDTime ]; then 
 				oldDTime=$dTime  
 				resNum=$reservace
@@ -77,8 +75,6 @@ if [ $reservNum -gt 0 ] ; then
 			jobStat=$(qstat | grep $resNum)
 			path=$(pwd)/VNClogin.txt
 			if [ -z "${jobStat}" ] ; then
-				#qsub -q $resNum -I -- 
-				#deleteVNClogin
 				initGui
 				#echo Job started and VNC correctly initialized
 			else
