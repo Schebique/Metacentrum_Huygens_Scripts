@@ -80,7 +80,16 @@ if [ $reservNum -gt 0 ] ; then
 			else
 				jobNum=$(qsub -- echo $jobStat | cut -d " " -f 1)
 				echo $resNum job $jobNum is already running. 
-				cat $path	
+				if [[ -f ./VNClogin.txt ]]; then 
+					cat $path
+				else
+					echo "but VNC login credentials are not available. Trying to find gui..."
+					module add gui
+					flag=$(gui -p info | grep -F "There're no VNC session(s) to show! Exiting..." -c)
+					if [ $flag -eq 0 ]; then initGui
+					else gui -p info
+					fi
+				fi 
 			fi 
 		elif [ $dTime -gt 0 ] && [ $dTime -lt 600 ] ; then #pokud zacne job do 10ti minut
 			echo #na novy radek
