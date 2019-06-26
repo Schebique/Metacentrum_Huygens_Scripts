@@ -46,7 +46,7 @@ test ssvnc
 #get credentials
 	dir=$(pwd)
 	dir="${dir// /\\ }"
-	hostname="doom30.metacentrum.cz"
+	hostname="doom29.metacentrum.cz"
 	echo -n "Metacentrum username:"
 	read username
 	sshLogin="$username@$hostname"
