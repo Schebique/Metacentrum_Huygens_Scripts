@@ -1,7 +1,7 @@
 
 How to use scripts
 
-1) start cmd and ssh session (ssh username@doom30.metacentrum.cz) or use putty.
+1) start cmd and ssh session (ssh username@doom29.metacentrum.cz) or use putty.
 2) run ./initHuygens.sh
 3) start your VNC client with provided informations
 4) start xterm on your remote desktop and run ./hupro.sh
