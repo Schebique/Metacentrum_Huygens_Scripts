@@ -88,7 +88,7 @@ if [ $reservNum -gt 0 ] ; then
 					gui -p info
 				fi 
 			fi 
-		elif [ $dTime -gt 0 ] && [ $dTime -lt 600 ] ; then #pokud zacne job do 10ti minut
+		elif [ $dTime -gt 0 ] && [ $dTime -lt 1800 ] ; then #pokud zacne job do 30ti minut
 			echo #na novy radek
 			read -p "Do you want wait $dTime seconds for job starts? (y/n) " -n 1 -r
 			if [[ $REPLY =~ ^[Yy]$ ]] ; then
@@ -125,7 +125,7 @@ if [ $reservNum -gt 0 ] ; then
 			fi
 		else
 			# [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1 # handle exits from shell or function but don't exit interactive shell
-			echo "Reservation starts more than 10 minutes later. Try it later again!"
+			echo "Reservation starts more than 30 minutes later. Try it later again!"
 			exit 1
 		fi
 	else 
