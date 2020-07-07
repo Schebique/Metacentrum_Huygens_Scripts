@@ -9,11 +9,12 @@ initGui() {
 	rSelect=d$(pbs_rstat -f $reservace | grep -F "Resource_List.select")
 	rSelect=$(echo $rSelect | cut -d " " -f 3)
 	qsub -q $resNum -l select=$rSelect ./initGui.sh
-	while ! [ -f ./VNClogin.txt ] ; do #cekej na start rezervace
+	path=$(pwd)/VNClogin.txt
+	while ! [ -f $path ] ; do #cekej na start rezervace
 		sleep 3
 	done
 	sleep 1
-	cat VNClogin.txt
+	cat $path
 }
 
 #username=$(eval users | cut -d" " -f 1)
